@@ -1,0 +1,5 @@
+.bannerbg{
+    background-image: url('../../../assets/bgbanner.png'),url('../../../assets/hand.jpg');
+    background-repeat: no-repeat;
+    background-position: center,right;
+}

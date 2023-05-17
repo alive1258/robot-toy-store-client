@@ -16,15 +16,15 @@ const Navbar = () => {
             <div className='py-4 md:px-10  flex justify-between items-center w-full h-full'>
                
                <div className='flex items-center gap-2'>
-                <div>
+                <div className='pl-4'>
                     <Link to='/'>
                     <img className='h-20 w-20' src={logo} alt="" />
                     </Link>
                     </div>
                 <div className='text-3xl font-bold mb-2'>RobotToyStudio</div>
                </div>
-                   {/* <h1 className='text-3xl font-bold text-blue-400'>Masarat</h1> */}
-                   <div className="md:flex hidden gap-8  ">
+
+                   <div className="md:flex hidden gap-8 text-lg text-white font-semibold">
                        <NavLink to="/">Home</NavLink>
                        <NavLink to='/alltoys'>All Toys</NavLink>
                        <NavLink to='/blogs'>Blogs</NavLink>
@@ -55,22 +55,22 @@ const Navbar = () => {
            </div>
 
            <div >
-         <div className={!nav ? 'hidden' : 'absolute bg-[#4ee9d9] w-full h-screen md:hidden px-8'}>
-                <p className='border-b-2 mb-4 border-blue-400 w-full'>
+         <div className={!nav ? 'hidden' : 'absolute bg-[#4ee9d9] w-full text-white  h-screen md:hidden px-8'}>
+                <p className='border-b-2 mb-4 border-[#ff8c00] w-full'>
                 <NavLink to="/">Home</NavLink>
                 </p>
-                <p className='border-b-2 mb-4 border-blue-400 w-full'>
+                <p className='border-b-2 mb-4 border-[#ff8c00] w-full'>
                 <NavLink to='/alltoys'>All Toys</NavLink>
                 </p>
-                <p className='border-b-2 mb-4 border-blue-400 w-full'>
+                <p className='border-b-2 mb-4 border-[#ff8c00] w-full'>
 
                 <NavLink to='/blogs'>Blogs</NavLink>
                 </p>
-                <p className='border-b-2 mb-4 border-blue-400 w-full'>
+                <p className='border-b-2 mb-4 border-[#ff8c00] w-full'>
 
                 <NavLink to='/mytoys'>My Toys</NavLink>
                 </p>
-                <p className='border-b-2 mb-4 border-blue-400 w-full'>
+                <p className='border-b-2 mb-4 border-[#ff8c00] w-full'>
 
                 <NavLink to='/addtoy'>Add A Toy</NavLink>
                 </p>

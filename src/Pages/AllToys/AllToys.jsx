@@ -3,7 +3,8 @@ import React from 'react';
 const AllToys = () => {
     return (
         <div>
-            AllToys
+            <h1 className='text-4xl text-center'>All Toys</h1>
+
         </div>
     );
 };

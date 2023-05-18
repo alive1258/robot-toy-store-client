@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { HiOutlineSearch } from "react-icons/hi";
 import logo from '../../../assets/logo.png'
 import './Navbar.css'
+import { AuthContext } from '../../../providers/AuthProviders';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleNav = () => setNav(!nav)
 
+     const {user}=useContext(AuthContext)
 
     return (
         <div className='bg-[#4ee9d9]'>
@@ -38,14 +40,21 @@ const Navbar = () => {
                    <button>Log out</button>
                </div> */}
                <div className="md:flex hidden items-center">
-                      <div className='md:flex hidden'> <HiOutlineSearch className='text-2xl'/></div>
+                      {/* <div className='md:flex hidden'> */}
+                      <div className='md:flex '>
+                        {/* {user.displayName} */}
+                         {/* <HiOutlineSearch className='text-2xl'/> */}
+                         </div>
                        <div className='mr-4'>
                        <AiOutlineMenu  className='text-[#9BEBA8] md:hidden block'/>
                        <AiOutlineClose className='text-[#9BEBA8] md:hidden block'/>
                        </div>
                   
                        <div>
+                        <Link to='/login'>
                            <button className="px-4 rounded-lg py-2 text-lg font-semibold text-white bg-[#ff8c00] hover:bg-[#e78f24] ml-2 md:block hidden">Login</button>
+                           </Link>
+
                        </div>
                    </div>
                <div onClick={handleNav} className='md:hidden mr-6'>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { GiSelfLove } from 'react-icons/gi';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+
 
 const ToyGallery = () => {
     return (
@@ -194,37 +193,7 @@ const ToyGallery = () => {
      
  
        </div>
-       <Tabs>
-    <TabList>
-    <div className='flex justify-center items-center gap-6'>
-    <Tab>Title 1</Tab>
-      <Tab>Title 2</Tab>
-      <Tab>Title 3</Tab>
-    </div>
-    </TabList>
-
-    <TabPanel >
-    <div className='flex gap-4 justify-center items-center'>
-    <h2>eeee content 10</h2>
-      <h2>rrrr content 11</h2>
-      <h2>tttt content 12</h2>
-    </div>
-    </TabPanel>
-    <TabPanel>
-    <div className='flex gap-4 justify-center items-center'>
-    <h2>yyyyy content 10</h2>
-      <h2>uuuu content 11</h2>
-      <h2>pppp content 12</h2>
-    </div>
-    </TabPanel>
-    <TabPanel>
-    <div className='flex gap-4 justify-center items-center'>
-    <h2>qqqqq content 10</h2>
-      <h2>wwww content 11</h2>
-      <h2>Aneeee content 12</h2>
-    </div>
-    </TabPanel>
-  </Tabs>
+  
 
         </div>
     );

@@ -12,14 +12,14 @@ const Footer = () => {
         <div className="grid border-b md:grid-cols-2 grid-cols-1 gap-10  pb-8">
           <div>
             <div className='flex items-center gap-2'>
-              <div className='pl-4'>
+              <div className=''>
                 <Link to='/'>
                   <img className='h-20 w-20' src={logo} alt="" />
                 </Link>
               </div>
               <div className='text-3xl font-bold mb-2'>RobotToyStudio</div>
             </div>
-            <div className="pt-6">
+            <div className="pt-6 ">
               <p>
                 Embark on exciting adventures and explore a world of 
                 technological<br /> marvels with our captivating robot toys that offer advanced features,<br /> realistic movements, and interactive play experiences for all ages.

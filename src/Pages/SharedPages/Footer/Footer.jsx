@@ -7,8 +7,8 @@ import { AiFillYoutube } from 'react-icons/ai';
 
 const Footer = () => {
   return (
-    <div className="px-6  md:px-10 pt-10 md:py-10 bg-[#4ee9d9]">
-      <div className=" ">
+    <div className="px-6 md:mt-36 md:px-10  md:py-10 bg-[#4ee9d9]">
+      <div className="py-6">
         <div className="grid border-b md:grid-cols-2 grid-cols-1 gap-10  pb-8">
           <div>
             <div className='flex items-center gap-2'>

@@ -8,14 +8,7 @@ const Banner = () => {
             <div className='md:px-10 px-6 md:pt-16'>
 
                 <div className="flex pt-6 p gap-4 ">
-                    <div className="bg-black relative h-8 w-8 rounded-full">
-                        <img
-                            className=" h-6 w-6 absolute top-1 left-1 rounded-full"
-                            src="https://i.pinimg.com/564x/96/c0/f7/96c0f7a7bbbddbf0b03a0c548a12596e.jpg"
-                            alt=""
-                        />
-                        {/* <img className=" h-6 w-6 text-white" src={handshek} alt="" /> */}
-                    </div>
+                
                     <div>
                         <h3 className="md:text-2xl font-semibold">Best Supportive Team Ever</h3>
                     </div>

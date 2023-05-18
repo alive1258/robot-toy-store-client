@@ -67,8 +67,8 @@ const Login = () => {
 
     return (
         <div>
-            <h1 className=''>Login</h1>
-            <div className="hero mt-10 min-h-screen loginbgpic">
+          
+            <div className="hero mt-16 min-h-screen loginbgpic">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl text-white font-bold">Login now!</h1>
@@ -100,6 +100,7 @@ const Login = () => {
                                       Don't Have an Account ? <Link to="/register" className="text-secondary font-semibold
                                         ">Register</Link>
                                 </label>
+                                <p className='text-danger'>{logInError}</p>
 
                             </div>
                         </div>

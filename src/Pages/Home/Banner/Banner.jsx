@@ -1,11 +1,12 @@
 import React from 'react';
 import './Banner.css'
 import ceoimg from '../../../assets/ceo.jpg'
+import banner from '../../../assets/banner.png'
 
 const Banner = () => {
     return (
         <div className='bannerbg mb-20 mt-20 h-[780px]'>
-            <div className='md:px-10 px-6 md:pt-16'>
+            <div className='md:px-10 px-6 md:pt-16 relative'>
 
                 <div className="flex pt-6 p gap-4 ">
                 
@@ -47,6 +48,9 @@ const Banner = () => {
                     <div className="h-3 w-3 rounded-full bg-[#657790]"></div>
                 </div>
 
+            </div>
+            <div className='absolute md:block hidden bottom-28 right-52 pr-28'>
+                <img src={banner} alt="" />
             </div>
         </div>
     );

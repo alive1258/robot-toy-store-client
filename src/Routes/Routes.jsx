@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import AllToys from "../Pages/AllToys/AllToys";
@@ -16,6 +16,10 @@ const router = createBrowserRouter([
         {
           path:'/', 
           element:<Home></Home> 
+        },
+        {
+          path:'/',
+          element:<Navigate to='/'></Navigate>
         },
       {
         path:'alltoys',

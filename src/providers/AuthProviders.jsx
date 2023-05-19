@@ -34,10 +34,7 @@ const AuthProviders = ({ children }) => {
         }
     }, [])
 
-    // const user = {
-    //     displayName: 'muri ka'
-
-    // }
+ 
 
     const authInfo = {
         user,

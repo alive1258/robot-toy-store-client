@@ -1,13 +1,13 @@
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-// import app from '../../../firebase/firebase.config';
+import app from '../../../firebase/firebase.config';
 import { AuthContext } from '../../../providers/AuthProviders';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
 import loginimg from '../../../assets/loginimg.png'
 
 const Login = () => {
-    // const auth = getAuth(app)
+    const auth = getAuth(app)
     const providergoogle = new GoogleAuthProvider()
 
     const [userInfos, setUserInfos] = useState(null)
@@ -26,10 +26,10 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
         form.reset("")
-        if(password.length<6){
-            setLogInError("please add al least 6 characters in your password")
-            return;
-        }
+        // if(password.length<6){
+        //     setLogInError("please add al least 6 characters in your password")
+        //     return;
+        // }
 
         signIn(email, password)
             .then(result => {
@@ -51,8 +51,8 @@ const Login = () => {
         .then(result=>{
             const userLogIn=result.user;
             console.log(userLogIn)
-            setUserInfos(userLogIn)
-            navigate(from,{replace:true})
+            // setUserInfos(userLogIn)
+            // navigate(from,{replace:true})
         })
         .catch(error=>{
             console.log(error.massage)

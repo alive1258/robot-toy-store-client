@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import loginimg from '../../../assets/loginimg.png'
 import { Link } from 'react-router-dom';
-// import { getAuth } from "firebase/auth";
-// import app from '../../../firebase/firebase.config';
+import { getAuth } from "firebase/auth";
+import app from '../../../firebase/firebase.config';
 import { AuthContext } from '../../../providers/AuthProviders';
+import { signInWithPopup } from 'firebase/auth';
 
 const Register = () => {
-    // const auth = getAuth(app);
+    const auth = getAuth(app);
     const { createUser, profileUpdate } = useContext(AuthContext);
     const [registerError,setRegisterError]=useState("")
     const [success, setSuccess] = useState("");
@@ -65,6 +66,18 @@ const Register = () => {
         //   });
 
     }
+    const handleGoogleSignIn=()=>{
+        signInWithPopup(auth,providergoogle)
+        .then(result=>{
+            const userLogIn=result.user;
+            console.log(userLogIn)
+            // setUserInfos(userLogIn)
+            // navigate(from,{replace:true})
+        })
+        .catch(error=>{
+            console.log(error.massage)
+        })
+    }
  
 
 
@@ -110,7 +123,7 @@ const Register = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <input className="text-white py-2 rounded-lg font-semibold bg-[#ff8c00] hover:bg-[#e78f24]" type="submit" value="Register"></input>
-                              
+                                <button  onClick={handleGoogleSignIn} className="text-white mt-2 py-2 rounded-lg font-semibold bg-[#ff8c00] hover:bg-[#e78f24]">Google</button><br />
                              
                                   <label >
                                   Already have an account ? <Link to="/login" className="text-secondary font-semibold

@@ -69,7 +69,8 @@ const Login = () => {
                        <img className='h-[600px]' src={loginimg} alt="" />
                     </div>
 
-                    <form onSubmit={handleLogin} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#46dfbb] ">
+                   
+                        <form onSubmit={handleLogin} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#46dfbb] ">
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -85,7 +86,7 @@ const Login = () => {
                              
                             </div>
                             <div className="form-control mt-6">
-                                <button className="text-white py-2 rounded-lg font-semibold bg-[#ff8c00] hover:bg-[#e78f24]" type="submit">Login</button>
+                                <input className="text-white py-2 rounded-lg font-semibold bg-[#ff8c00] hover:bg-[#e78f24]" type="submit" value="Login"></input>
                                 <button  onClick={handleGoogleSignIn} className="text-white mt-2 py-2 rounded-lg font-semibold bg-[#ff8c00] hover:bg-[#e78f24]">Google</button><br />
                              
                                   <label >
@@ -96,7 +97,8 @@ const Login = () => {
 
                             </div>
                         </div>
-                    </form>
+                            </form>
+                   
 
                 </div>
             </div>

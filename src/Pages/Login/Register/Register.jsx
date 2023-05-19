@@ -109,7 +109,7 @@ const Register = () => {
                                 </label> */}
                             </div>
                             <div className="form-control mt-6">
-                                <button className="text-white py-2 rounded-lg font-semibold bg-[#ff8c00] hover:bg-[#e78f24]" type="submit">Register</button>
+                                <input className="text-white py-2 rounded-lg font-semibold bg-[#ff8c00] hover:bg-[#e78f24]" type="submit" value="Register"></input>
                               
                              
                                   <label >

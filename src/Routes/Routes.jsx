@@ -8,6 +8,7 @@ import AddToy from "../Pages/AddToy/AddToy";
 import Login from "../Pages/Login/Login/Login";
 import Register from "../Pages/Login/Register/Register";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 
 const router = createBrowserRouter([
     {
@@ -19,10 +20,10 @@ const router = createBrowserRouter([
           path:'/', 
           element:<Home></Home> 
         },
-        {
-          path:'/',
-          element:<Navigate to='/'></Navigate>
-        },
+        // {
+        //   path:'/',
+        //   element:<Navigate to='/'></Navigate>
+        // },
       {
         path:'alltoys',
         element:<AllToys></AllToys>,
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
       {
         path:'register',
         element:<Register></Register>
+      },
+      {
+        path:'toy/:id',
+        element:<ToyDetails></ToyDetails>,
+        loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
       }
 
 

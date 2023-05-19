@@ -20,7 +20,7 @@ const Register = () => {
         event.preventDefault();
         setRegisterError("")
         const form= event.target;
-        const name=form.name.value;
+        const displayName=form.name.value;
         const photoURL=form.photo.value;
         const email = form.email.value;
         const password=form.password.value;
@@ -35,7 +35,7 @@ const Register = () => {
             return;
         }
       
-        console.log(photoURL,name,email,password);
+        console.log(photoURL,displayName,email,password);
         form.reset("")
         createUser(email,password)
         .then(result=>{

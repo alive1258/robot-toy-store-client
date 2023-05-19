@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
-import { HiOutlineSearch } from "react-icons/hi";
 import logo from '../../../assets/logo.png'
 import './Navbar.css'
 import { AuthContext } from '../../../providers/AuthProviders';
@@ -54,7 +53,7 @@ const Navbar = () => {
                     {/* <div className='md:flex hidden'> */}
                     <div className='md:flex '>
                         {user && (
-                            <div className="tooltip tooltip-bottom" data-tip={user?.name}>
+                            <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
                                 <button className="">
                                     <img
                                         style={{

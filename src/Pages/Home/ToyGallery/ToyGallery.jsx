@@ -4,10 +4,10 @@ import { GiSelfLove } from 'react-icons/gi';
 
 const ToyGallery = () => {
     return (
-        <div>
+        <div className='md:px-14 '>
             <div className='text-center'>
                 <h1 className='text-4xl font-bold text-[#1A3D37]'>Toy Gallery</h1>
-                <p className='mt-4 px-6'>Step into our Toy Gallery and be enchanted by a captivating display of the most delightful and enchanting robot toys</p>
+                <p className='mt-4 px-6'>Step into our Toy Gallery and be enchanted by a captivating display of the most <br /> delightful and enchanting robot toys</p>
             </div>
             <div className="grid md:grid-cols-6 grid-cols-2 px-6 mt-10  gap-4 py-10">
        

@@ -5,7 +5,7 @@ import { GoLocation } from 'react-icons/go';
 
 const ContactUs = () => {
     return (
-        <div className='mt-20 md:px-20 px-6'>
+        <div className='mt-20 md:px-20 px-6 mb-10'>
                 <div className='bg-gray-200 px-6 md:px-20 py-12 rounded-xl shadow-2xl mb-4 '>
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-8'>
                     <div >

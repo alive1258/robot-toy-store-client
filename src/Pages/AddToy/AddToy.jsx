@@ -5,8 +5,8 @@ import Swal from 'sweetalert2'
 
 const AddToy = () => {
     const { user } = useContext(AuthContext)
-    const addToys = useLoaderData()
-    const { name, email, photo, toyName, subCategory, price, rating, quantity } = addToys
+    // const addToys = useLoaderData()
+    // const { name, email, photo, toyName, subCategory, price, rating, quantity } = addToys
 
     const handleAddToy = (event) => {
         event.preventDefault();
@@ -52,7 +52,7 @@ const AddToy = () => {
     }
 
     return (
-        <div className='mt-20'>
+        <div className='mt-20 px-20'>
             <h1 className='mb-4 text-4xl text-center'>Add Toy: {user?.displayName}</h1>
 
             <form onSubmit={handleAddToy}>

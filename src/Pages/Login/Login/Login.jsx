@@ -9,6 +9,7 @@ import loginimg from '../../../assets/loginimg.png'
 const Login = () => {
     const auth = getAuth(app)
     const providergoogle = new GoogleAuthProvider()
+    
 
     const [userInfos, setUserInfos] = useState(null)
     const [logInError, setLogInError] = useState("")

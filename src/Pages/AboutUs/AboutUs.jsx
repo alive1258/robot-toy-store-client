@@ -5,7 +5,7 @@ const AboutUs = () => {
     return (
         <div className='mt-28'>
    <div className='text-center mb-14'>
-   <h1 className='text-4xl'>About Us</h1>
+   <h1 className='text-4xl font-bold text-[#1A3D37]'>About Us</h1>
               <p className='mt-2'>At Robot Toy World, where imagination meets robotics, we offer a carefully <br /> curated collection of high-quality and innovative robot toys</p>
 
    </div>
@@ -13,7 +13,7 @@ const AboutUs = () => {
             <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
                 <div className="md:pl-24 pt-20 px-6">
                   
-                    <h1 className="md:text-5xl text-2xl pt-4 font-semibold">
+                    <h1 className="md:text-5xl text-2xl text-[#1A3D37] pt-4 font-semibold">
                         We Have 15 Years Of <br />
                         Experience On Business <br />
                         Development area

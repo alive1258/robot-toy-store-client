@@ -53,7 +53,7 @@ const AddToy = () => {
 
     return (
         <div className='mt-20 px-20'>
-            <h1 className='mb-4 text-4xl text-center'>Add Toy: {user?.displayName}</h1>
+            <h1 className='mb-4 text-4xl text-center'>Add Toy</h1>
 
             <form onSubmit={handleAddToy}>
 

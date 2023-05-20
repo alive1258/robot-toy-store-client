@@ -57,7 +57,11 @@ const router = createBrowserRouter([
         path:'register',
         element:<Register></Register>
       },
-    
+      {
+        path:'updatetoy/:id',
+        element:<UpdateToy></UpdateToy>,
+        loader:({params})=>fetch(`http://localhost:5000/addToys/${params.id}`)
+      },
 
       {
         path:'toy/:id',
@@ -68,11 +72,7 @@ const router = createBrowserRouter([
 
       ]
     },
-    {
-      path:'updatetoy/:id',
-      element:<UpdateToy></UpdateToy>,
-      loader:({params})=>fetch(`http://localhost:5000/addToys/${params.id}`)
-    },
+  
 
   
   ]);

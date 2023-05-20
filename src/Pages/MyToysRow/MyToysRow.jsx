@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from "sweetalert2";
 
-const MyToysRow = ({ myToy}) => {
-    const [toys, setToys] = useState([])
+const MyToysRow = ({ myToy,setMyToys,myToys}) => {
+    // const [toys, setToys] = useState([])
 
     const { _id, toyName, photo, subCategory, rating, price, quantity, description } = myToy
 
   
 
-    const handleDelete = (_id) => {
-        console.log(_id);
+    const handleDelete = (id) => {
+        console.log(id);
         Swal.fire({
             title: "Are you sure delete Toy?",
             text: "You won't be able to revert this!",
@@ -21,7 +21,7 @@ const MyToysRow = ({ myToy}) => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/addToys/${_id}`, {
+                fetch(`http://localhost:5000/addToys/${id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())
@@ -34,9 +34,9 @@ const MyToysRow = ({ myToy}) => {
                                 "success"
                             )
 
-                            const remaining = toys.filter((toy) => toy._id !== _id);
+                            const remaining = myToys.filter((toy) => toy._id !== id);
                             // setToys(remaining);
-                            setToys(remaining);
+                            setMyToys(remaining);
 
                         }
 
@@ -69,7 +69,7 @@ const MyToysRow = ({ myToy}) => {
 
 
             <td>
-               <Link to={`updatetoy/${_id}`}>
+               <Link to={`/updatetoy/${_id}`}>
                <button className="px-2 rounded-lg py-2 text-sm font-semibold text-white bg-[#ff8c00] hover:bg-[#e78f24] w-full">Update</button>
                </Link>
             </td>

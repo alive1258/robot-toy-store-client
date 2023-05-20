@@ -57,8 +57,10 @@ const MyToys = () => {
                                 key={myToy._id}
                                 myToy={myToy}
                                 // toys={toys}
+                                myToys={myToys}
                                 // setToys={setToys}
-                                // setMyToys={setMyToys}
+                                
+                                setMyToys={setMyToys}
 
                             ></MyToysRow>)
                         }

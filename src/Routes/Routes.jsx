@@ -9,6 +9,7 @@ import Login from "../Pages/Login/Login/Login";
 import Register from "../Pages/Login/Register/Register";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import ToyDetails from "../Pages/ToyDetails/ToyDetails";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
     {
@@ -20,13 +21,14 @@ const router = createBrowserRouter([
           path:'/', 
           element:<Home></Home> 
         },
-        // {
-        //   path:'/',
-        //   element:<Navigate to='/'></Navigate>
-        // },
+        {
+          path:'/',
+          element:<Navigate to='/'></Navigate>
+        },
       {
         path:'alltoys',
         element:<AllToys></AllToys>,
+        loader:()=> fetch('http://localhost:5000/addToys')
     
       },
       {
@@ -35,11 +37,12 @@ const router = createBrowserRouter([
       },
       {
         path:'mytoys',
-        element:<MyToys></MyToys>
+        element:<PrivetRoute><MyToys></MyToys></PrivetRoute>
       },
       {
         path:'addtoy',
-        element:<AddToy></AddToy>
+        element:<PrivetRoute><AddToy></AddToy></PrivetRoute>,
+        loader:()=>fetch('http://localhost:5000/products/')
       },
       {
         path:'login',
@@ -51,8 +54,8 @@ const router = createBrowserRouter([
       },
       {
         path:'toy/:id',
-        element:<ToyDetails></ToyDetails>,
-        loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+        element:<PrivetRoute><ToyDetails></ToyDetails></PrivetRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/addToys/${params.id}`)
       }
 
 

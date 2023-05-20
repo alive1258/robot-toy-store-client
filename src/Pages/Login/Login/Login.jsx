@@ -35,9 +35,9 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
-                // setUserInfos(loggedUser);
-                // navigate(from, { replace: true })
-                // setLogInError("")
+                setUserInfos(loggedUser);
+                navigate(from, { replace: true })
+                setLogInError("")
             })
             .catch(error => {
                 console.log(error.massage)
@@ -51,8 +51,9 @@ const Login = () => {
         .then(result=>{
             const userLogIn=result.user;
             console.log(userLogIn)
-            // setUserInfos(userLogIn)
-            // navigate(from,{replace:true})
+            setUserInfos(loggedUser);
+            navigate(from, { replace: true })
+          
         })
         .catch(error=>{
             console.log(error.massage)

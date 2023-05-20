@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Toys = ({allProduct}) => {
-    const {_id,toyName,subCategory,price,quantity}=allProduct
+const Toys = ({allToy}) => {
+    const {_id,toyName,subCategory,price,quantity,photo}=allToy
     return (
        
              <tr>
@@ -10,7 +10,7 @@ const Toys = ({allProduct}) => {
                          <td>
                              <div className="flex items-center space-x-3">
                                  <div className="avatar">
-             
+                                {/* <img src={photo} alt="" /> */}
                                  </div>
                                  <div>
                                      <div className="font-semibold">{toyName}</div>

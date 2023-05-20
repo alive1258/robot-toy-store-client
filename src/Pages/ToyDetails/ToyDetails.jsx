@@ -8,13 +8,13 @@ const ToyDetails = () => {
     const { user } = useContext(AuthContext)
 
     const singleToyDetails = useLoaderData()
-    const { toyName, price, quantity, pictureUrl, rating, description } = singleToyDetails
+    const { toyName, price, quantity, photo, rating, description } = singleToyDetails
     return (
         // <div className='bgimg mt-20 mx-10'>
         <div className='mt-20 mx-10'>
            
             <div className="card w-[590px] glass mx-64 shadow-2xl">
-                <div className='w-[590px] h-[590px]' ><img src={pictureUrl} alt=""  /></div>
+                <div className='w-[590px] h-[590px]' ><img src={photo} alt=""  /></div>
                 <div className="card-body">
                     <h2 className="card-title">{toyName}</h2>
                     <div>

@@ -28,7 +28,7 @@ const AddToy = () => {
         }
         console.log('addToys:', addToysData)
         // form.reset('')
-        fetch('https://robot-toy-store-server.vercel.app/addToys', {
+        fetch('https://robot-toy-store-server.vercel.app/toys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -54,7 +54,7 @@ const AddToy = () => {
     }
 
     return (
-        <div className='mt-20 px-20'>
+        <div className='mt-20 md:px-20 px-6 mb-10'>
             <h1 className='mb-4 text-4xl text-center'>Add Toy</h1>
 
             <form onSubmit={handleAddToy}>

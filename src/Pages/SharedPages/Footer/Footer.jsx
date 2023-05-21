@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaFacebookF ,FaPinterestP} from 'react-icons/fa';
 import { BsInstagram } from 'react-icons/bs';
 import { AiFillYoutube } from 'react-icons/ai';
+import { GoLocation } from 'react-icons/go';
 
 const Footer = () => {
   return (
@@ -25,6 +26,10 @@ const Footer = () => {
                 technological<br /> marvels with our captivating robot toys that offer advanced features,<br /> realistic movements, and interactive play experiences for all ages.
               
               </p>
+              <div className='flex mt-4 items-center gap-2'> <GoLocation/>
+
+               Al Dabab Street, Al Ma'azer Dist.Riyadh
+              </div>
             </div>
           </div>
           <div>

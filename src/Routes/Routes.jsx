@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       {
         path:'alltoys',
         element:<AllToys></AllToys>,
-        loader:()=> fetch('https://robot-toy-store-server.vercel.app/addToys')
+        loader:()=> fetch('https://robot-toy-store-server.vercel.app/toys')
     
       },
       {
@@ -61,18 +61,18 @@ const router = createBrowserRouter([
       {
         path:'updatetoy/:id',
         element:<UpdateToy></UpdateToy>,
-        loader:({params})=>fetch(`https://robot-toy-store-server.vercel.app/addToys/${params.id}`)
+        loader:({params})=>fetch(`https://robot-toy-store-server.vercel.app/toys/${params.id}`)
       },
       {
         path:'singletoy/:id',
         element:<PrivetRoute><SingleToyDetails></SingleToyDetails></PrivetRoute>,
-        loader:({params})=>fetch(`https://robot-toy-store-server.vercel.app/products/${params.id}`)
+        loader:({params})=>fetch(`https://robot-toy-store-server.vercel.app/singleProducts/${params.id}`)
       },
 
       {
         path:'toy/:id',
         element:<PrivetRoute><ToyDetails></ToyDetails></PrivetRoute>,
-        loader:({params})=>fetch(`https://robot-toy-store-server.vercel.app/addToys/${params.id}`)
+        loader:({params})=>fetch(`https://robot-toy-store-server.vercel.app/toys/${params.id}`)
       }
 
 

@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const ContactUs = () => {
+    useEffect(() => {
+        AOS.init();
+      }, []);
+      
     return (
-        <div className='mt-20 md:px-20 px-6 mb-10'>
+        <div data-aos="fade-down-right"className='mt-20 md:px-20 px-6 mb-10 '>
                 <div className='bg-gray-200 px-6 md:px-20 py-12 rounded-xl shadow-2xl mb-4 '>
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-8'>
                     <div >

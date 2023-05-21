@@ -11,7 +11,7 @@ const AllToys = () => {
     return (
         <div>
             <h1 className='text-4xl text-center py-8'>All Toys : {allToys.length}</h1>
-            <div className="overflow-x-auto w-full px-20">
+            <div className="overflow-x-auto w-full md:px-20">
                 <table className="table w-full mt-10">
                     {/* head */}
                     <thead>

@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { GiSelfLove } from 'react-icons/gi';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 const ToyGallery = () => {
+    useEffect(() => {
+        AOS.init();
+      }, []);
+      
     return (
-        <div className='md:px-14 '>
-            <div className='text-center'>
+        <div  className='md:px-14 '>
+            <div data-aos="fade-right" className='text-center'>
                 <h1 className='text-4xl font-bold text-[#1A3D37]'>Toy Gallery</h1>
                 <p className='mt-4 px-6'>Step into our Toy Gallery and be enchanted by a captivating display of the most <br /> delightful and enchanting robot toys</p>
             </div>

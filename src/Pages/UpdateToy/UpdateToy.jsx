@@ -30,7 +30,7 @@ const UpdateToy = () => {
         }
         console.log('addToys:', UpdateToyData)
         // form.reset('')
-        fetch(`https://robot-toy-store-server.vercel.app/addToys/${_id}`, {
+        fetch(`https://robot-toy-store-server.vercel.app/toys/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

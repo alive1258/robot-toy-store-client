@@ -2,10 +2,17 @@ import React, { useEffect, useState } from 'react';
 import 'react-tabs/style/react-tabs.css';
 import './ToyCategory.css'
 import ToyShop from '../../ToyShop/ToyShop';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const ToyCategory = () => {
     const [toyShops, setToyShops] = useState([])
     const [activeTab, setActiveTab] = useState("RoboPets")
+    useEffect(() => {
+        AOS.init();
+      }, []);
+      
 
     useEffect(() => {
         fetch(`https://robot-toy-store-server.vercel.app/products/${activeTab}`)
@@ -27,7 +34,7 @@ const ToyCategory = () => {
 
     return (
         <div className='mt-20 md:px-20 px-6'>
-            <div className='text-center mb-10 '>
+            <div data-aos="fade-right" className='text-center mb-10'>
                 <h1 className='text-4xl font-bold text-[#1A3D37] mb-4'>Toy Category</h1>
                 <p>
                     Welcome to our vast selection of robot toys, where you'll find a diverse range of categories  to explore <br /> and
@@ -56,13 +63,13 @@ const ToyCategory = () => {
 
 
 
-    <div className=''>
-    <div className='grid md:grid-cols-2 gap-8 justify-center rounded-xl px-20 items-center mt-8 bg-gray-100 py-10'>
+ 
+    <div className='grid md:grid-cols-2 gap-8 justify-center rounded-xl md:px-20 items-center mt-8 bg-gray-100 py-10'>
                 {
                     toyShops.map(toyShop => <ToyShop key={toyShop._id} toyShop={toyShop}></ToyShop>)
                 }
             </div>
-    </div>
+
 
 
 

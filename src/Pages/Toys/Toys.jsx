@@ -5,6 +5,7 @@ import UseTitle from '../../Hooks/UseTitle';
 const Toys = ({ allToy }) => {
     UseTitle("Toy")
     const { _id, toyName, subCategory, price, quantity } = allToy
+    console.log(allToy)
     return (
 
         <tr>

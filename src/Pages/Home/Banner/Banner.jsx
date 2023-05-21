@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Banner.css'
 import ceoimg from '../../../assets/ceo.jpg'
 import banner from '../../../assets/banner.png'
 
+
+
 const Banner = () => {
+ 
+      
     return (
         <div className='bannerbg mb-20 mt-20 md:h-[700px]'>
             <div className='md:flex items-center justify-between gap-12 px-6'>

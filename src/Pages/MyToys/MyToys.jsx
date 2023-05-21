@@ -16,7 +16,7 @@ const MyToys = () => {
     const [myToys, setMyToys] = useState([])
    
 
-    const url = `https://robot-toy-store-server.vercel.app/addToys?email=${user.email}`
+    const url = `https://robot-toy-store-server.vercel.app/toys?email=${user.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -24,7 +24,7 @@ const MyToys = () => {
     }, [])
 
     return (
-        <div>
+        <div className='mt-20 mb-10'>
             <h1 className='mt-10 mb-6 text-4xl text-center'>My Toys:{myToys.length}</h1>
 
             <div className='flex justify-center gap-6'>
@@ -32,7 +32,7 @@ const MyToys = () => {
                 <h4>Name: {user?.displayName}</h4>
                 <h4>Email: {user?.email}</h4>
             </div>
-            <div className="overflow-x-auto w-full px-20">
+            <div className="overflow-x-auto w-full md:px-20">
                 <table className="table w-full mt-10">
                     {/* head */}
                     <thead>

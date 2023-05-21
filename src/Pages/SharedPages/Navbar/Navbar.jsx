@@ -27,31 +27,24 @@ const Navbar = () => {
                             <img className='h-20 w-20' src={logo} alt="" />
                         </Link>
                     </div>
-                    <div className='text-3xl font-bold mb-2'>RobotToyStudio</div>
+                    <div className='md:text-3xl text-xl  font-bold mb-2'>RobotToyStudio</div>
                 </div>
 
                 <div className="md:flex hidden gap-8 text-lg text-white font-semibold">
                     <NavLink to="/">Home</NavLink>
                     <NavLink to='/alltoys'>All Toys</NavLink>
                     <NavLink to='/blogs'>Blogs</NavLink>
-                {
-                    user && <>
-                        <NavLink to='/mytoys'>My Toys</NavLink>
-                    <NavLink to='/addtoy'>Add A Toy</NavLink>
-                    
-                    </>
-                }
+                    {
+                        user && <>
+                            <NavLink to='/mytoys'>My Toys</NavLink>
+                            <NavLink to='/addtoy'>Add A Toy</NavLink>
+
+                        </>
+                    }
                 </div>
 
-
-                {/* <div className='hidden md:flex pr-4'>
-                   <button className='mr-4'>sign in</button>
-                   <button>Log out</button>
-               </div> */}
                 <div className="md:flex justify-center items-center">
-                    {/* {user?.displayName} */}
-                    {/* <div className='md:flex hidden'> */}
-                    <div className='md:flex '>
+                    <div className='md:flex md:mr-4'>
                         {user && (
                             <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
                                 <button className="">
@@ -70,12 +63,9 @@ const Navbar = () => {
 
                         )}
                     </div>
-                    <div className='mr-4'>
-                        <AiOutlineMenu className='text-[#9BEBA8] md:hidden block' />
-                        <AiOutlineClose className='text-[#9BEBA8] md:hidden block' />
-                    </div>
 
-                    <div>
+
+                    <div className='md:block hidden'>
                         {
                             user ? <button onClick={handleLogOut} className="px-4 rounded-lg py-2 text-lg font-semibold text-white bg-[#ff8c00] hover:bg-[#e78f24] w-full">LogOut</button> : <Link to='/login'>
                                 <button className="px-4 rounded-lg py-2 text-lg font-semibold text-white bg-[#ff8c00] hover:bg-[#e78f24] ml-2 md:block hidden">Login</button>
@@ -90,6 +80,7 @@ const Navbar = () => {
 
                 </div>
             </div>
+            {/* mobile menu  */}
 
             <div >
                 <div className={!nav ? 'hidden' : 'absolute bg-[#4ee9d9] w-full text-white  h-screen md:hidden px-8'}>
@@ -100,37 +91,29 @@ const Navbar = () => {
                         <NavLink to='/alltoys'>All Toys</NavLink>
                     </p>
                     <p className='border-b-2 mb-4 border-[#ff8c00] w-full'>
-
                         <NavLink to='/blogs'>Blogs</NavLink>
                     </p>
-                    <p className='border-b-2 mb-4 border-[#ff8c00] w-full'>
+                    {
+                        user && <>
+                            <p className='border-b-2 mb-4 border-[#ff8c00] w-full'>  <NavLink to='/mytoys'>My Toys</NavLink></p>
+                            <p className='border-b-2 mb-4 border-[#ff8c00] w-full'>  <NavLink to='/addtoy'>Add A Toy</NavLink></p>
 
-                        <NavLink to='/mytoys'>My Toys</NavLink>
-                    </p>
-                    <p className='border-b-2 mb-4 border-[#ff8c00] w-full'>
-
-                        <NavLink to='/addtoy'>Add A Toy</NavLink>
-                    </p>
-                    <div>
-
+                        </>
+                    }
+                    <div className=''>
                         {
-                            user ? <button onClick={handleLogOut} className="px-4 rounded-lg py-2 text-lg font-semibold text-white bg-[#ff8c00] hover:bg-[#e78f24] w-full">LogOut</button> : <Link to='/login'>
-                                <button className="px-4 rounded-lg py-2 text-lg font-semibold text-white bg-[#ff8c00] hover:bg-[#e78f24] ml-2 md:block hidden">Login</button>
+                            user ? <button onClick={handleLogOut} className="px-4 rounded-lg py-2 text-lg font-semibold text-white bg-[#ff8c00] hover:bg-[#e78f24] w-full">LogOut</button> :<Link to='/login'>
+
+                            <button className="px-4 rounded-lg py-2 text-lg font-semibold text-white bg-[#ff8c00] hover:bg-[#e78f24] w-full">login</button>
                             </Link>
                         }
-
-
-
 
 
                     </div>
 
 
-                    {/* <div className='flex flex-col pr-4'>
-                    <button className='bg-transparent text-indigo-500 px-8 mb-4'>sign in</button>
-                    <button className='px-8 py-3'>Log out</button>
-                </div> */}
                 </div>
+
             </div>
 
         </div>

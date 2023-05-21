@@ -1,0 +1,21 @@
+.card-Single{
+    box-shadow: 5px 9px 16px rgb(237, 117, 117);
+    border-radius: 4px;
+    width: 500px;
+    margin: auto;
+    /* text-align: center; */
+}
+.right-card{
+    padding: 10px;
+}
+/* .item-nav{
+    text-align: center !important;
+} */
+.tab{
+    padding: 5px 5px;
+    background-color: rgb(193, 100, 100);
+    cursor: pointer;
+}
+.tab1{
+    border-right: 2px solid gray;
+}

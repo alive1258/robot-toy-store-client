@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path:'alltoys',
         element:<AllToys></AllToys>,
-        loader:()=> fetch('http://localhost:5000/addToys')
+        loader:()=> fetch('https://robot-toy-store-server.vercel.app/addToys')
     
       },
       {
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       {
         path:'mytoys',
         element:<PrivetRoute><MyToys></MyToys></PrivetRoute>,
-        // loader:()=> fetch('http://localhost:5000/addToys')
+     
       },
  
   
@@ -60,13 +60,13 @@ const router = createBrowserRouter([
       {
         path:'updatetoy/:id',
         element:<UpdateToy></UpdateToy>,
-        loader:({params})=>fetch(`http://localhost:5000/addToys/${params.id}`)
+        loader:({params})=>fetch(`https://robot-toy-store-server.vercel.app/addToys/${params.id}`)
       },
 
       {
         path:'toy/:id',
         element:<PrivetRoute><ToyDetails></ToyDetails></PrivetRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/addToys/${params.id}`)
+        loader:({params})=>fetch(`https://robot-toy-store-server.vercel.app/addToys/${params.id}`)
       }
 
 

@@ -9,7 +9,7 @@ import loginimg from '../../../assets/loginimg.png'
 const Login = () => {
     const auth = getAuth(app)
     const providergoogle = new GoogleAuthProvider()
-    
+
 
     const [userInfos, setUserInfos] = useState(null)
     const [logInError, setLogInError] = useState("")
@@ -17,7 +17,7 @@ const Login = () => {
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const form = location.state?.form?.pathname || '/';
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = (event) => {
         event.preventDefault()

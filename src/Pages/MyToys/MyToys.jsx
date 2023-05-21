@@ -14,7 +14,7 @@ const MyToys = () => {
     const [myToys, setMyToys] = useState([])
    
 
-    const url = `http://localhost:5000/addToys?email=${user.email}`
+    const url = `https://robot-toy-store-server.vercel.app/addToys?email=${user.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

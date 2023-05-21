@@ -21,7 +21,7 @@ const MyToysRow = ({ myToy,setMyToys,myToys}) => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/addToys/${id}`, {
+                fetch(`https://robot-toy-store-server.vercel.app/addToys/${id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())

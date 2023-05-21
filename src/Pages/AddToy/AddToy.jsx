@@ -26,7 +26,7 @@ const AddToy = () => {
         }
         console.log('addToys:', addToysData)
         // form.reset('')
-        fetch('http://localhost:5000/addToys', {
+        fetch('https://robot-toy-store-server.vercel.app/addToys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

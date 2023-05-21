@@ -8,14 +8,9 @@
 .right-card{
     padding: 10px;
 }
-/* .item-nav{
-    text-align: center !important;
-} */
+
 .tab{
-    padding: 5px 5px;
-    background-color: rgb(193, 100, 100);
+    padding: 5px 8px;
+    background-color: #75eec6;
     cursor: pointer;
-}
-.tab1{
-    border-right: 2px solid gray;
 }

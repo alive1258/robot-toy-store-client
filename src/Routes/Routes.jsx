@@ -12,6 +12,7 @@ import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 import PrivetRoute from "./PrivetRoute";
 import UpdateToy from "../Pages/UpdateToy/UpdateToy";
 import MyToysRow from "../Pages/MyToysRow/MyToysRow";
+import SingleToyDetails from "../Pages/SingleToyDetails/SingleToyDetails";
 
 const router = createBrowserRouter([
     {
@@ -61,6 +62,11 @@ const router = createBrowserRouter([
         path:'updatetoy/:id',
         element:<UpdateToy></UpdateToy>,
         loader:({params})=>fetch(`https://robot-toy-store-server.vercel.app/addToys/${params.id}`)
+      },
+      {
+        path:'singletoy/:id',
+        element:<PrivetRoute><SingleToyDetails></SingleToyDetails></PrivetRoute>,
+        loader:({params})=>fetch(`https://robot-toy-store-server.vercel.app/products/${params.id}`)
       },
 
       {

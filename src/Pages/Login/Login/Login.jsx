@@ -5,8 +5,10 @@ import { AuthContext } from '../../../providers/AuthProviders';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
 import loginimg from '../../../assets/loginimg.png'
+import UseTitle from '../../../Hooks/UseTitle';
 
 const Login = () => {
+    UseTitle("login")
     const auth = getAuth(app)
     const providergoogle = new GoogleAuthProvider()
 

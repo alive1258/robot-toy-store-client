@@ -1,7 +1,9 @@
 import React from 'react';
 import hand2 from '../../assets/hand2.png'
+import UseTitle from '../../Hooks/UseTitle';
 
 const AboutUs = () => {
+    UseTitle("About Us")
     return (
         <div className='mt-28'>
    <div className='text-center mb-14'>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './ToyCategory.css'
 import ToyShop from '../../ToyShop/ToyShop';
@@ -10,26 +9,16 @@ const ToyCategory = () => {
 
     useEffect(() => {
         fetch(`https://robot-toy-store-server.vercel.app/products/${activeTab}`)
-        // fetch('https://robot-toy-store-server.vercel.app/products')
             .then(res => res.json())
-          
+
             .then(data => {
                 setToyShops(data)
                 console.log(data)
-               
+
             })
     }, [activeTab])
     console.log(activeTab)
-  
-        // const result = toyShops?.filter(toyShop => toyShop.subCategory == activeTab)
-        // console.log(result)
-     
-        // setToyShops(result)
 
-  
-   
-    
-   
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName)
@@ -39,43 +28,48 @@ const ToyCategory = () => {
     return (
         <div className='mt-20 md:px-20 px-6'>
             <div className='text-center mb-10 '>
-                <h1 className='text-4xl font-bold text-[#1A3D37]'>Toy Category</h1>
-                <p></p>
+                <h1 className='text-4xl font-bold text-[#1A3D37] mb-4'>Toy Category</h1>
+                <p>
+                    Welcome to our vast selection of robot toys, where you'll find a diverse range of categories  to explore <br /> and
+                    choose from. Step into a world of robotic wonder and discover the perfect toy category <br /> to suit your
+                    interests and ignite your imagination.</p>
             </div>
-         
-                <div>
-                    <div className='flex justify-center items-center gap-6'>
-                        <div onClick={() => handleTabClick("RoboPets")}
-                            className={`tab tab1 RoboPets${activeTab == "RoboPets" ? "bg-red-400 text-white" : ""
-                                }`}
-                        >RoboPets Toy</div>
-                        <div onClick={() => handleTabClick("RoboRacers")}
-                            className={`tab tab1 RoboRacers${activeTab == "RoboRacers" ? "bg-red-400 text-white" : ""
-                                }`}
 
-                        >RoboRacers toy</div>
-                        <div onClick={() => handleTabClick("RoboSidekicks")}
-                            className={`tab tab1 RoboSidekicks${activeTab == "RoboSidekicks" ? "bg-red-400 text-white" : ""
-                                }`}
+            <div>
+                <div className='flex justify-center items-center gap-6'>
+                    <div onClick={() => handleTabClick("RoboPets")}
+                        className={`tab  RoboPets${activeTab == "RoboPets" ? "bg-gray-400 text-white font-bold" : ""
+                            }`}
+                    >RoboPets Toy</div>
+                    <div onClick={() => handleTabClick("RoboRacers")}
+                        className={`tab  RoboRacers${activeTab == "RoboRacers" ? "bg-gray-400 text-white font-bold" : ""
+                            }`}
 
-                        >RoboSidekicks toy</div>
-                    </div>
+                    >RoboRacers toy</div>
+                    <div onClick={() => handleTabClick("RoboWizards")}
+                        className={`tab  RoboWizards${activeTab == "RoboWizards" ? "bg-gray-400 text-white font-bold" : ""
+                            }`}
+
+                    >RoboWizards toy</div>
                 </div>
-        
-
-               
-                <div className='grid md:grid-cols-3 gap-4 justify-center items-center mt-8'>
-                    {
-                        toyShops.map(toyShop => <ToyShop key={toyShop._id} toyShop={toyShop}></ToyShop>)
-                    }
-                </div>
-                  
-                
-             
-               
-              
             </div>
-       
+
+
+
+    <div className=''>
+    <div className='grid md:grid-cols-2 gap-8 justify-center rounded-xl px-20 items-center mt-8 bg-gray-100 py-10'>
+                {
+                    toyShops.map(toyShop => <ToyShop key={toyShop._id} toyShop={toyShop}></ToyShop>)
+                }
+            </div>
+    </div>
+
+
+
+
+
+        </div>
+
     );
 };
 

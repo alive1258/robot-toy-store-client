@@ -2,13 +2,16 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import './ToyDetails.css'
 import { AuthContext } from '../../providers/AuthProviders';
+import UseTitle from '../../Hooks/UseTitle';
 
 
 const ToyDetails = () => {
+    UseTitle("Toy Details")
     const { user } = useContext(AuthContext)
 
     const singleToyDetails = useLoaderData()
     const { toyName, price, quantity, photo, rating, description } = singleToyDetails
+    console.log("singleToyDetails",singleToyDetails)
     return (
         // <div className='bgimg mt-20 mx-10'>
         <div className='mt-20 mx-10'>

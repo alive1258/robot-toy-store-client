@@ -27,18 +27,12 @@ const MyToys = () => {
         <div className='mt-20 mb-10'>
             <h1 className='mt-10 mb-6 text-4xl text-center'>My Toys:{myToys.length}</h1>
 
-            <div className='flex justify-center gap-6'>
-                sellerInfo:
-                <h4>Name: {user?.displayName}</h4>
-                <h4>Email: {user?.email}</h4>
-            </div>
+           
             <div className="overflow-x-auto w-full md:px-20">
                 <table className="table w-full mt-10">
                     {/* head */}
                     <thead>
                         <tr>
-                            {/* toyName,pictureUrl,subCategory,rating,price,quantity,description                          */}
-
                             <th>Toy Picture</th>
                             <th>Description</th>
                             <th>Toy Name</th>
